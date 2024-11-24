@@ -3,7 +3,7 @@ Generate PDF certificate using JavaScript
 
 This app uses two library PDF-lib.js and FileSaver.js
 
-![Screenshot](https://i.imgur.com/H7mcyZ3.png)
+![Screenshot](./Frame%20631642.jpg)
 
 # Certificate Sample
-![Sample pdf](https://i.imgur.com/GFGU3K9.jpg)
+![Sample pdf](./cert.pdf)
