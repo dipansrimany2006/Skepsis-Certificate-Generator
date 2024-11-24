@@ -1,7 +1,7 @@
 const userName = document.getElementById("name");
 const submitBtn = document.getElementById("submitBtn");
 
-const { PDFDocument, rgb, degrees } = PDFLib;
+const { PDFDocument, rgb, degrees} = PDFLib;
 
 const capitalize = (str, lower = false) =>
   (lower ? str.toLowerCase() : str).replace(/(?:^|\s|["'([{])+\S/g, (match) =>
@@ -30,12 +30,12 @@ const generatePDF = async (name) => {
   pdfDoc.registerFontkit(fontkit);
 
   //get font
-  const fontBytes = await fetch("./Sanchez-Regular.ttf").then((res) =>
+  const fontBytes = await fetch("./KaushanScript-Regular.ttf").then((res) =>
     res.arrayBuffer()
   );
 
   // Embed our custom font in the document
-  const SanChezFont = await pdfDoc.embedFont(fontBytes);
+  const KaushanFont = await pdfDoc.embedFont(fontBytes);
 
   // Get the first page of the document
   const pages = pdfDoc.getPages();
@@ -43,10 +43,10 @@ const generatePDF = async (name) => {
 
   // Draw a string of text diagonally across the first page
   firstPage.drawText(name, {
-    x: 240,
-    y: 300,
-    size: 40,
-    font: SanChezFont,
+    x: 270,
+    y: 335,
+    size: 45,
+    font: KaushanFont,
     color: rgb(0,0,0),
   });
 
